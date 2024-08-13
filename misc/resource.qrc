@@ -1,0 +1,41 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/colors_black.svg</file>
+        <file>icons/file_open_black.svg</file>
+        <file>icons/folder_open_black.svg</file>
+        <file>icons/gif_black.svg</file>
+        <file>icons/gif_box_black.svg</file>
+        <file>icons/height_black.svg</file>
+        <file>icons/image_black.svg</file>
+        <file>icons/keyboard_arrow_left_black.svg</file>
+        <file>icons/keyboard_arrow_right_black.svg</file>
+        <file>icons/palette_black.svg</file>
+        <file>icons/photo_camera_black.svg</file>
+        <file>icons/reset_image_black.svg</file>
+        <file>icons/restart_alt_black.svg</file>
+        <file>icons/videocam_black.svg</file>
+        <file>icons/enable_black.svg</file>
+        <file>icons/play_arrow_black.svg</file>
+        <file>icons/power_settings_black.svg</file>
+        <file>icons/settings_black.svg</file>
+        <file>icons/arrow_back_black.svg</file>
+        <file>icons/cancel_black.svg</file>
+        <file>icons/check_black.svg</file>
+        <file>icons/close_black.svg</file>
+        <file>icons/done_black.svg</file>
+        <file>icons/exit_to_app_black.svg</file>
+        <file>icons/keyboard_arrow_down_black.svg</file>
+        <file>icons/keyboard_arrow_up_black.svg</file>
+        <file>icons/menu_black.svg</file>
+        <file>icons/refresh_black.svg</file>
+        <file>icons/remove_black.svg</file>
+        <file>icons/start_black.svg</file>
+        <file>icons/add_black.svg</file>
+        <file>icons/keyboard_double_arrow_down_black.svg</file>
+        <file>icons/keyboard_double_arrow_up_black.svg</file>
+        <file>icons/keyboard_double_arrow_up_yellow.svg</file>
+        <file>icons/keyboard_double_arrow_down_yellow.svg</file>
+        <file>images/3DViewer-Logo.png</file>
+        <file>images/3DViewer-Icon.png</file>
+    </qresource>
+</RCC>
