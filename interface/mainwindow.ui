@@ -1,0 +1,3500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>860</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font/>
+  </property>
+  <property name="windowTitle">
+   <string>3DViewer_v2.0</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLineEdit {
+padding: 0px;
+}
+QComboBox {
+padding: 0px;
+}
+QDoubleSpinBox {
+padding: 0px;
+}
+QSpinBox {
+padding: 0px;
+}</string>
+  </property>
+  <property name="dockOptions">
+   <set>QMainWindow::AllowTabbedDocks|QMainWindow::AnimatedDocks</set>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="minimumSize">
+    <size>
+     <width>640</width>
+     <height>480</height>
+    </size>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item row="0" column="0" rowspan="2">
+     <widget class="OpenGLWidget" name="widgetView" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QWidget {
+background-color: rgb(21, 22, 30);
+}</string>
+      </property>
+      <widget class="QWidget" name="widgetPanel" native="true">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>300</width>
+         <height>939</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>300</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QWidget {
+background: none;
+}
+
+QLabel {
+background: none;
+color: rgb(255, 210, 128);
+/*font: 14pt &quot;Anta&quot;;*/
+}
+
+QPushButton {
+/*font: 14pt &quot;Anta&quot;;*/
+color: rgb(6, 17, 19);
+border-radius: 6px;
+border-style: solid;
+border-width: 2px;
+border-color: rgb(8, 1, 18);
+background-color: rgb(128, 222, 244);
+}
+
+QPushButton:hover {
+background-color: rgb(208, 243, 251);
+}
+
+QPushButton:pressed {
+background-color: rgb(34, 62, 98);
+}
+
+QPushButton {
+background-color: rgb(255, 210, 128);
+}
+
+QPushButton:hover {
+background-color: rgb(255, 224, 179);
+}
+
+QPushButton:pressed {
+background-color: rgb(255, 153, 0);
+}
+
+QComboBox {
+border: 1px solid;
+/*font: 13pt &quot;Anta&quot;;*/
+border-radius: 6px;
+/* padding: 0 5px; */
+color: rgb(11, 1, 24);
+background-color: rgb(255, 210, 128);
+border-color: rgb(8, 1, 18);
+selection-background-color: rgb(255, 249, 229);
+selection-color: black;
+}
+
+QComboBox::drop-down:button {
+color: rgb(255, 210, 128);
+border-top-right-radius: 4px;
+border-bottom-right-radius: 4px;
+border-style: solid;
+border-width: 0px;
+border-left-width: 1px;
+border-color: rgb(8, 1, 18);
+background-color: rgb(128, 222, 244);
+padding: 0px;
+width: 20px;
+}
+
+QComboBox::down-arrow {
+image: url(:/icons/keyboard_arrow_down_black.svg);
+}
+
+QComboBox::drop-down:hover {
+background-color: rgb(208, 243, 251);
+}
+
+QComboBox::drop-down:pressed {
+background-color: rgb(34, 62, 98);
+}
+
+QComboBox QAbstractItemView {
+color: rgb(255, 210, 128);
+border: 0px solid;
+border-radius: 4px;
+border-color: rgba(130, 127, 255, 133);
+background-color: rgb(2, 1, 18);
+}
+
+QComboBox:item {
+color: rgb(255, 210, 128);
+}
+
+QComboBox:item:selected {
+background-color: rgb(12, 117, 141);
+color: rgb(255, 210, 128);
+}
+
+QLineEdit {
+border: 2px solid;
+/*font: 13pt &quot;Anta&quot;;*/
+border-radius: 6px;
+/* padding: 0 5px; */
+selection-background-color: rgb(255, 249, 229);
+selection-color: black;
+color: rgb(11, 1, 24);
+background-color: rgb(255, 210, 128);
+border-color: rgb(8, 1, 18);
+}
+
+QDoubleSpinBox {
+border: 1px solid;
+/*font: 13pt &quot;Anta&quot;;*/
+/* padding: 0 5px; */
+border-radius: 6px;
+selection-background-color: rgb(255, 249, 229);
+selection-color: black;
+color: rgb(11, 1, 24);
+background-color: rgb(255, 210, 128);
+border-color: rgb(8, 1, 18);
+}
+
+QDoubleSpinBox::up-button {
+subcontrol-origin: border;
+subcontrol-position: top right; 
+border-top-right-radius: 3px;
+border-style: solid;
+border-width: 1px;
+border-color: rgb(8, 1, 18);
+background-color: rgb(128, 222, 244);
+image: url(:/icons/add_black.svg);
+padding: 0px;
+margin: 0px;
+width: 16px;
+height: 13px;
+ }
+
+
+QDoubleSpinBox::down-button {
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+border-bottom-right-radius: 3px;
+border-style: solid;
+border-width: 1px;
+border-color: rgb(8, 1, 18);
+background-color: rgb(128, 222, 244);
+image: url(:/icons/remove_black.svg);
+padding: 0px;
+margin: 0px;
+width: 16px;
+height: 13px;
+ }
+
+QDoubleSpinBox::down-button:hover {
+background-color: rgb(208, 243, 251);
+}
+
+QDoubleSpinBox::down-button:pressed {
+background-color: rgb(34, 62, 98);
+}
+
+QDoubleSpinBox::up-button:hover {
+background-color: rgb(208, 243, 251);
+}
+
+QDoubleSpinBox::up-button:pressed {
+background-color: rgb(34, 62, 98);
+}
+
+QRadioButton {
+/*font: 13pt &quot;Anta&quot;;*/
+color: rgb(255, 210, 128);
+}
+
+QRadioButton::indicator {
+width: 10px;
+height: 10px;
+border-radius: 7px;
+}
+
+QRadioButton::indicator:checked {
+background-color:  rgb(243, 89, 97);
+border: 2px solid rgb(255, 210, 128);
+}
+
+QRadioButton::indicator:unchecked {
+background-color: rgb(8, 1, 18);
+border: 2px solid rgb(255, 210, 128);
+}
+
+QCheckBox {
+/*font: 13pt &quot;Anta&quot;;*/
+color: rgb(255, 210, 128);
+spacing: 4px;
+}
+
+QCheckBox::QLabel {
+}
+
+QCheckBox::indicator {
+width: 13px;
+height: 13px;
+border-radius: 3px;
+}
+
+QCheckBox::indicator:checked {
+background-color: rgb(128, 222, 244);
+border: 2px solid rgb(255, 210, 128);
+image: url(:/icons/check_black.svg);
+}
+
+QCheckBox::indicator:unchecked {
+background-color: rgb(8, 1, 18);
+border: 2px solid rgb(255, 210, 128);
+}
+
+QSpinBox {
+border: 1px solid;
+/*font: 13pt &quot;Anta&quot;;*/
+/* padding: 0 5px; */
+border-radius: 6px;
+selection-background-color: rgb(255, 249, 229);
+selection-color: black;
+color: rgb(11, 1, 24);
+background-color: rgb(255, 210, 128);
+border-color: rgb(74, 71, 158);
+}
+
+QSpinBox::up-button {
+subcontrol-origin: border;
+subcontrol-position: top right; 
+border-top-right-radius: 3px;
+border-style: solid;
+border-width: 0px;
+border-color: rgb(74, 71, 158);
+background-color:  rgb(74, 71, 158);
+image: url(:/icons/add_black.svg);
+padding: 0px;
+margin: 0px;
+width: 16px;
+height: 14px;
+}
+
+QSpinBox::down-button {
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+border-bottom-right-radius: 3px;
+border-style: solid;
+border-width: 0px;
+border-color: rgb(74, 71, 158);
+background-color:  rgb(74, 71, 158);
+image: url(:/icons/remove_black.svg);
+padding: 0px;
+margin: 0px;
+width: 16px;
+height: 14px;
+}
+
+QSpinBox::down-button:hover {
+background-color: rgb(169, 167, 215);
+}
+
+QSpinBox::down-button:pressed {
+background-color: rgb(25, 24, 53);
+}
+
+QSpinBox::up-button:hover {
+background-color: rgb(169, 167, 215);
+}
+
+QSpinBox::up-button:pressed {
+background-color: rgb(25, 24, 53);
+}
+</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="spacing">
+         <number>12</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QWidget" name="widgetFile" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>138</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QWidget {
+background-color: rgb(58, 8, 120);
+border-radius: 10px;
+border-width: 0px;
+}
+
+QMainWindow {
+background-color: rgb(21, 22, 30);
+}
+
+QLabel {
+background: none;
+color: rgb(255, 210, 128);
+/*font: 14pt &quot;Anta&quot;;*/
+}
+
+QPushButton {
+/*font: 14pt &quot;Anta&quot;;*/
+color: rgb(6, 17, 19);
+border-radius: 6px;
+border-style: solid;
+border-width: 2px;
+border-color: rgb(8, 1, 18);
+background-color: rgb(128, 222, 244);
+}
+
+QPushButton:hover {
+background-color: rgb(208, 243, 251);
+}
+
+QPushButton:pressed {
+background-color: rgb(34, 62, 98);
+}
+
+QComboBox {
+border: 1px solid;
+/*font: 13pt &quot;Anta&quot;;*/
+border-radius: 6px;
+/* padding: 0 5px; */
+color: rgb(11, 1, 24);
+background-color: rgb(255, 210, 128);
+border-color: rgb(8, 1, 18);
+selection-background-color: rgb(255, 249, 229);
+selection-color: black;
+}
+
+QComboBox::drop-down:button {
+color: rgb(255, 210, 128);
+border-top-right-radius: 4px;
+border-bottom-right-radius: 4px;
+border-style: solid;
+border-width: 0px;
+border-left-width: 1px;
+border-color: rgb(8, 1, 18);
+background-color: rgb(128, 222, 244);
+padding: 0px;
+width: 20px;
+}
+
+QComboBox::down-arrow {
+image: url(:/icons/keyboard_arrow_down_black.svg);
+}
+
+QComboBox::drop-down:hover {
+background-color: rgb(208, 243, 251);
+}
+
+QComboBox::drop-down:pressed {
+background-color: rgb(34, 62, 98);
+}
+
+QComboBox QAbstractItemView {
+color: rgb(255, 210, 128);
+border: 0px solid;
+border-radius: 4px;
+border-color: rgba(130, 127, 255, 133);
+background-color: rgb(2, 1, 18);
+}
+
+QComboBox:item {
+color: rgb(255, 210, 128);
+}
+
+QComboBox:item:selected {
+background-color: rgb(12, 117, 141);
+color: rgb(255, 210, 128);
+}
+
+QLineEdit {
+border: 2px solid;
+/*font: 13pt &quot;Anta&quot;;*/
+border-radius: 6px;
+border-top-right-radius: 0px;
+border-bottom-right-radius: 0px;
+/* padding: 0 8px; */
+selection-background-color: rgb(255, 249, 229);
+selection-color: black;
+color: rgb(11, 1, 24);
+background-color: rgb(255, 210, 128);
+border-color: rgb(8, 1, 18);
+}
+
+QDoubleSpinBox {
+border: 1px solid;
+/*font: 13pt &quot;Anta&quot;;*/
+/* padding: 0 5px; */
+border-radius: 6px;
+selection-background-color: rgb(255, 249, 229);
+selection-color: black;
+color: rgb(11, 1, 24);
+background-color: rgb(255, 210, 128);
+border-color: rgb(8, 1, 18);
+}
+
+QDoubleSpinBox::up-button {
+subcontrol-origin: border;
+subcontrol-position: top right; 
+border-top-right-radius: 3px;
+border-style: solid;
+border-width: 1px;
+border-color: rgb(8, 1, 18);
+background-color: rgb(128, 222, 244);
+image: url(:/icons/add_black.svg);
+padding: 0px;
+margin: 0px;
+width: 16px;
+height: 13px;
+ }
+
+
+QDoubleSpinBox::down-button {
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+border-bottom-right-radius: 3px;
+border-style: solid;
+border-width: 1px;
+border-color: rgb(8, 1, 18);
+background-color: rgb(128, 222, 244);
+image: url(:/icons/remove_black.svg);
+padding: 0px;
+margin: 0px;
+width: 16px;
+height: 13px;
+ }
+
+QDoubleSpinBox::down-button:hover {
+background-color: rgb(208, 243, 251);
+}
+
+QDoubleSpinBox::down-button:pressed {
+background-color: rgb(34, 62, 98);
+}
+
+QDoubleSpinBox::up-button:hover {
+background-color: rgb(208, 243, 251);
+}
+
+QDoubleSpinBox::up-button:pressed {
+background-color: rgb(34, 62, 98);
+}
+
+QRadioButton {
+/*font: 13pt &quot;Anta&quot;;*/
+color: rgb(255, 210, 128);
+}
+
+QRadioButton::indicator {
+width: 10px;
+height: 10px;
+border-radius: 7px;
+}
+
+QRadioButton::indicator:checked {
+background-color:  rgb(243, 89, 97);
+border: 2px solid rgb(255, 210, 128);
+}
+
+QRadioButton::indicator:unchecked {
+background-color: rgb(8, 1, 18);
+border: 2px solid rgb(255, 210, 128);
+}
+
+QCheckBox {
+/*font: 13pt &quot;Anta&quot;;*/
+color: rgb(255, 210, 128);
+spacing: 4px;
+}
+
+QCheckBox::QLabel {
+}
+
+QCheckBox::indicator {
+width: 13px;
+height: 13px;
+border-radius: 3px;
+}
+
+QCheckBox::indicator:checked {
+background-color: rgb(128, 222, 244);
+border: 2px solid rgb(255, 210, 128);
+image: url(:/icons/check_black.svg);
+}
+
+QCheckBox::indicator:unchecked {
+background-color: rgb(8, 1, 18);
+border: 2px solid rgb(255, 210, 128);
+}
+
+QSpinBox {
+border: 1px solid;
+/*font: 13pt &quot;Anta&quot;;*/
+/* padding: 0 5px; */
+border-radius: 6px;
+selection-background-color: rgb(255, 249, 229);
+selection-color: black;
+color: rgb(11, 1, 24);
+background-color: rgb(255, 210, 128);
+border-color: rgb(74, 71, 158);
+}
+
+QSpinBox::up-button {
+subcontrol-origin: border;
+subcontrol-position: top right; 
+border-top-right-radius: 3px;
+border-style: solid;
+border-width: 0px;
+border-color: rgb(74, 71, 158);
+background-color:  rgb(74, 71, 158);
+image: url(:/icons/add_black.svg);
+padding: 0px;
+margin: 0px;
+width: 16px;
+height: 14px;
+}
+
+QSpinBox::down-button {
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+border-bottom-right-radius: 3px;
+border-style: solid;
+border-width: 0px;
+border-color: rgb(74, 71, 158);
+background-color:  rgb(74, 71, 158);
+image: url(:/icons/remove_black.svg);
+padding: 0px;
+margin: 0px;
+width: 16px;
+height: 14px;
+}
+
+QSpinBox::down-button:hover {
+background-color: rgb(169, 167, 215);
+}
+
+QSpinBox::down-button:pressed {
+background-color: rgb(25, 24, 53);
+}
+
+QSpinBox::up-button:hover {
+background-color: rgb(169, 167, 215);
+}
+
+QSpinBox::up-button:pressed {
+background-color: rgb(25, 24, 53);
+}
+</string>
+          </property>
+          <widget class="QLabel" name="labelFileInfo">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>55</y>
+             <width>211</width>
+             <height>81</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>File:
+Size:
+Vertexes:
+Edges:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+           </property>
+           <property name="margin">
+            <number>0</number>
+           </property>
+           <property name="indent">
+            <number>-1</number>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="lineEditPath">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>221</width>
+             <height>38</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButtonOpenFile">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>10</y>
+             <width>38</width>
+             <height>38</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-bottom-left-radius: 0px;
+border-top-left-radius: 0px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../misc/resource.qrc">
+             <normaloff>:/icons/file_open_black.svg</normaloff>:/icons/file_open_black.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="default">
+            <bool>false</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButtonStart">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>50</y>
+             <width>38</width>
+             <height>38</height>
+            </rect>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../misc/resource.qrc">
+             <normaloff>:/icons/play_arrow_black.svg</normaloff>:/icons/play_arrow_black.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButtonReset">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>90</y>
+             <width>38</width>
+             <height>38</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../misc/resource.qrc">
+             <normaloff>:/icons/restart_alt_black.svg</normaloff>:/icons/restart_alt_black.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>22</width>
+             <height>22</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButtonHideAll">
+           <property name="geometry">
+            <rect>
+             <x>277</x>
+             <y>0</y>
+             <width>23</width>
+             <height>138</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>1</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+color: rgb(6, 17, 19);
+border: 0px transparent;
+border-radius: 10px;
+border-top-left-radius: 0px;
+border-bottom-left-radius: 0px;
+background-color: rgb(255, 210, 128);
+}
+
+QPushButton:hover {
+background-color: rgb(255, 224, 179);
+}
+
+QPushButton:pressed {
+background-color: rgb(255, 153, 0);
+}
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../misc/resource.qrc">
+             <normaloff>:/icons/keyboard_arrow_left_black.svg</normaloff>:/icons/keyboard_arrow_left_black.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButtonHidder">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>126</y>
+             <width>301</width>
+             <height>12</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+font: 14pt &quot;Anta&quot;;
+color: rgb(6, 17, 19);
+border: 0px transparent;
+border-radius: 0px;
+border-bottom-right-radius: 10px;
+border-bottom-left-radius: 10px;
+background-color: transparent;
+}
+
+QPushButton:hover {
+background-color: rgba(255, 255, 255, 100);
+}
+
+QPushButton:pressed {
+background-color: rgba(255, 255, 255, 200);
+}
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonControlShow">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>22</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: none;</string>
+          </property>
+          <property name="text">
+           <string>Control Panel</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../misc/resource.qrc">
+            <normaloff>:/icons/keyboard_double_arrow_down_black.svg</normaloff>:/icons/keyboard_double_arrow_down_black.svg</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="widgetControlPanel" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>260</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QWidget {
+background-color: rgb(58, 8, 120);
+border-radius: 10px;
+}
+
+QMainWindow {
+background-color: rgb(21, 22, 30);
+}
+
+QLabel {
+background: none;
+color: rgb(255, 210, 128);
+/*font: 14pt &quot;Anta&quot;;*/
+}
+
+QPushButton {
+/*font: 14pt &quot;Anta&quot;;*/
+color: rgb(6, 17, 19);
+border-radius: 6px;
+border-style: solid;
+border-width: 2px;
+border-color: rgb(8, 1, 18);
+background-color: rgb(128, 222, 244);
+}
+
+QPushButton:hover {
+background-color: rgb(208, 243, 251);
+}
+
+QPushButton:pressed {
+background-color: rgb(34, 62, 98);
+}
+
+QComboBox {
+border: 1px solid;
+/*font: 13pt &quot;Anta&quot;;*/
+border-radius: 6px;
+/* padding: 0 5px; */
+color: rgb(11, 1, 24);
+background-color: rgb(255, 210, 128);
+border-color: rgb(8, 1, 18);
+selection-background-color: rgb(255, 249, 229);
+selection-color: black;
+}
+
+QComboBox::drop-down:button {
+color: rgb(255, 210, 128);
+border-top-right-radius: 4px;
+border-bottom-right-radius: 4px;
+border-style: solid;
+border-width: 0px;
+border-left-width: 1px;
+border-color: rgb(8, 1, 18);
+background-color: rgb(128, 222, 244);
+padding: 0px;
+width: 20px;
+}
+
+QComboBox::down-arrow {
+image: url(:/icons/keyboard_arrow_down_black.svg);
+}
+
+QComboBox::drop-down:hover {
+background-color: rgb(208, 243, 251);
+}
+
+QComboBox::drop-down:pressed {
+background-color: rgb(34, 62, 98);
+}
+
+QComboBox QAbstractItemView {
+color: rgb(255, 210, 128);
+border: 0px solid;
+border-radius: 4px;
+border-color: rgba(130, 127, 255, 133);
+background-color: rgb(2, 1, 18);
+}
+
+QComboBox:item {
+color: rgb(255, 210, 128);
+}
+
+QComboBox:item:selected {
+background-color: rgb(12, 117, 141);
+color: rgb(255, 210, 128);
+}
+
+QLineEdit {
+border: 2px solid;
+/*font: 13pt &quot;Anta&quot;;*/
+border-radius: 6px;
+/* padding: 0 8px; */
+selection-background-color: rgb(255, 249, 229);
+selection-color: black;
+color: rgb(11, 1, 24);
+background-color: rgb(255, 210, 128);
+border-color: rgb(8, 1, 18);
+}
+
+QDoubleSpinBox {
+border: 1px solid;
+/*font: 13pt &quot;Anta&quot;;*/
+/* padding: 0 5px; */
+border-radius: 6px;
+selection-background-color: rgb(255, 249, 229);
+selection-color: black;
+color: rgb(11, 1, 24);
+background-color: rgb(255, 210, 128);
+border-color: rgb(8, 1, 18);
+}
+
+QDoubleSpinBox::up-button {
+subcontrol-origin: border;
+subcontrol-position: top right; 
+border-top-right-radius: 3px;
+border-style: solid;
+border-width: 1px;
+border-color: rgb(8, 1, 18);
+background-color: rgb(128, 222, 244);
+image: url(:/icons/add_black.svg);
+padding: 0px;
+margin: 0px;
+width: 16px;
+height: 13px;
+ }
+
+
+QDoubleSpinBox::down-button {
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+border-bottom-right-radius: 3px;
+border-style: solid;
+border-width: 1px;
+border-color: rgb(8, 1, 18);
+background-color: rgb(128, 222, 244);
+image: url(:/icons/remove_black.svg);
+padding: 0px;
+margin: 0px;
+width: 16px;
+height: 13px;
+ }
+
+QDoubleSpinBox::down-button:hover {
+background-color: rgb(208, 243, 251);
+}
+
+QDoubleSpinBox::down-button:pressed {
+background-color: rgb(34, 62, 98);
+}
+
+QDoubleSpinBox::up-button:hover {
+background-color: rgb(208, 243, 251);
+}
+
+QDoubleSpinBox::up-button:pressed {
+background-color: rgb(34, 62, 98);
+}
+
+QRadioButton {
+/*font: 13pt &quot;Anta&quot;;*/
+color: rgb(255, 210, 128);
+}
+
+QRadioButton::indicator {
+width: 10px;
+height: 10px;
+border-radius: 7px;
+}
+
+QRadioButton::indicator:checked {
+background-color:  rgb(243, 89, 97);
+border: 2px solid rgb(255, 210, 128);
+}
+
+QRadioButton::indicator:unchecked {
+background-color: rgb(8, 1, 18);
+border: 2px solid rgb(255, 210, 128);
+}
+
+QCheckBox {
+/*font: 13pt &quot;Anta&quot;;*/
+color: rgb(255, 210, 128);
+spacing: 4px;
+}
+
+QCheckBox::QLabel {
+}
+
+QCheckBox::indicator {
+width: 13px;
+height: 13px;
+border-radius: 3px;
+}
+
+QCheckBox::indicator:checked {
+background-color: rgb(128, 222, 244);
+border: 2px solid rgb(255, 210, 128);
+image: url(:/icons/check_black.svg);
+}
+
+QCheckBox::indicator:unchecked {
+background-color: rgb(8, 1, 18);
+border: 2px solid rgb(255, 210, 128);
+}
+
+QSpinBox {
+border: 1px solid;
+/*font: 13pt &quot;Anta&quot;;*/
+/* padding: 0 5px; */
+border-radius: 6px;
+selection-background-color: rgb(255, 249, 229);
+selection-color: black;
+color: rgb(11, 1, 24);
+background-color: rgb(255, 210, 128);
+border-color: rgb(74, 71, 158);
+}
+
+QSpinBox::up-button {
+subcontrol-origin: border;
+subcontrol-position: top right; 
+border-top-right-radius: 3px;
+border-style: solid;
+border-width: 0px;
+border-color: rgb(74, 71, 158);
+background-color:  rgb(74, 71, 158);
+image: url(:/icons/add_black.svg);
+padding: 0px;
+margin: 0px;
+width: 16px;
+height: 14px;
+}
+
+QSpinBox::down-button {
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+border-bottom-right-radius: 3px;
+border-style: solid;
+border-width: 0px;
+border-color: rgb(74, 71, 158);
+background-color:  rgb(74, 71, 158);
+image: url(:/icons/remove_black.svg);
+padding: 0px;
+margin: 0px;
+width: 16px;
+height: 14px;
+}
+
+QSpinBox::down-button:hover {
+background-color: rgb(169, 167, 215);
+}
+
+QSpinBox::down-button:pressed {
+background-color: rgb(25, 24, 53);
+}
+
+QSpinBox::up-button:hover {
+background-color: rgb(169, 167, 215);
+}
+
+QSpinBox::up-button:pressed {
+background-color: rgb(25, 24, 53);
+}
+</string>
+          </property>
+          <widget class="QDoubleSpinBox" name="doubleSpinBoxRotationZ">
+           <property name="geometry">
+            <rect>
+             <x>130</x>
+             <y>220</y>
+             <width>81</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+           <property name="maximum">
+            <double>199.990000000000009</double>
+           </property>
+           <property name="value">
+            <double>10.000000000000000</double>
+           </property>
+          </widget>
+          <widget class="QDoubleSpinBox" name="doubleSpinBoxRotationY">
+           <property name="geometry">
+            <rect>
+             <x>130</x>
+             <y>190</y>
+             <width>81</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="maximum">
+            <double>199.990000000000009</double>
+           </property>
+           <property name="value">
+            <double>10.000000000000000</double>
+           </property>
+          </widget>
+          <widget class="QDoubleSpinBox" name="doubleSpinBoxRotationX">
+           <property name="geometry">
+            <rect>
+             <x>130</x>
+             <y>160</y>
+             <width>81</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="maximum">
+            <double>199.990000000000009</double>
+           </property>
+           <property name="value">
+            <double>10.000000000000000</double>
+           </property>
+          </widget>
+          <widget class="QDoubleSpinBox" name="doubleSpinBoxShiftZ">
+           <property name="geometry">
+            <rect>
+             <x>130</x>
+             <y>130</y>
+             <width>81</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="maximum">
+            <double>199.990000000000009</double>
+           </property>
+           <property name="value">
+            <double>10.000000000000000</double>
+           </property>
+          </widget>
+          <widget class="QDoubleSpinBox" name="doubleSpinBoxShiftY">
+           <property name="geometry">
+            <rect>
+             <x>130</x>
+             <y>100</y>
+             <width>81</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="maximum">
+            <double>199.990000000000009</double>
+           </property>
+           <property name="value">
+            <double>10.000000000000000</double>
+           </property>
+          </widget>
+          <widget class="QDoubleSpinBox" name="doubleSpinBoxScale">
+           <property name="geometry">
+            <rect>
+             <x>130</x>
+             <y>30</y>
+             <width>81</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="value">
+            <double>5.000000000000000</double>
+           </property>
+          </widget>
+          <widget class="QDoubleSpinBox" name="doubleSpinBoxShiftX">
+           <property name="geometry">
+            <rect>
+             <x>130</x>
+             <y>70</y>
+             <width>81</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="maximum">
+            <double>199.990000000000009</double>
+           </property>
+           <property name="value">
+            <double>10.000000000000000</double>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButtonScaleMinus">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>30</y>
+             <width>31</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-bottom-right-radius: 0px;
+border-top-right-radius: 0px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../misc/resource.qrc">
+             <normaloff>:/icons/remove_black.svg</normaloff>:/icons/remove_black.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>16</width>
+             <height>16</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButtonScalePlus">
+           <property name="geometry">
+            <rect>
+             <x>260</x>
+             <y>30</y>
+             <width>31</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-bottom-left-radius: 0px;
+border-top-left-radius: 0px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../misc/resource.qrc">
+             <normaloff>:/icons/add_black.svg</normaloff>:/icons/add_black.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>16</width>
+             <height>16</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButtonShiftXMinus">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>70</y>
+             <width>31</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-bottom-right-radius: 0px;
+border-top-right-radius: 0px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../misc/resource.qrc">
+             <normaloff>:/icons/keyboard_arrow_left_black.svg</normaloff>:/icons/keyboard_arrow_left_black.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButtonShiftYMinus">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>100</y>
+             <width>31</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-bottom-right-radius: 0px;
+border-top-right-radius: 0px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../misc/resource.qrc">
+             <normaloff>:/icons/keyboard_arrow_left_black.svg</normaloff>:/icons/keyboard_arrow_left_black.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButtonShiftYPlus">
+           <property name="geometry">
+            <rect>
+             <x>260</x>
+             <y>100</y>
+             <width>31</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-bottom-left-radius: 0px;
+border-top-left-radius: 0px;
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../misc/resource.qrc">
+             <normaloff>:/icons/keyboard_arrow_right_black.svg</normaloff>:/icons/keyboard_arrow_right_black.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButtonShiftXPlus">
+           <property name="geometry">
+            <rect>
+             <x>260</x>
+             <y>70</y>
+             <width>31</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-bottom-left-radius: 0px;
+border-top-left-radius: 0px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../misc/resource.qrc">
+             <normaloff>:/icons/keyboard_arrow_right_black.svg</normaloff>:/icons/keyboard_arrow_right_black.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButtonShiftZMinus">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>130</y>
+             <width>31</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-bottom-right-radius: 0px;
+border-top-right-radius: 0px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../misc/resource.qrc">
+             <normaloff>:/icons/keyboard_arrow_left_black.svg</normaloff>:/icons/keyboard_arrow_left_black.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButtonShiftZPlus">
+           <property name="geometry">
+            <rect>
+             <x>260</x>
+             <y>130</y>
+             <width>31</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-bottom-left-radius: 0px;
+border-top-left-radius: 0px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../misc/resource.qrc">
+             <normaloff>:/icons/keyboard_arrow_right_black.svg</normaloff>:/icons/keyboard_arrow_right_black.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QLabel" name="labelShiftZ">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>130</y>
+             <width>110</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Shift by Z</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButtonRotationXMinus">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>160</y>
+             <width>31</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-bottom-right-radius: 0px;
+border-top-right-radius: 0px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../misc/resource.qrc">
+             <normaloff>:/icons/keyboard_arrow_left_black.svg</normaloff>:/icons/keyboard_arrow_left_black.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButtonRotationXPlus">
+           <property name="geometry">
+            <rect>
+             <x>260</x>
+             <y>160</y>
+             <width>31</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-bottom-left-radius: 0px;
+border-top-left-radius: 0px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../misc/resource.qrc">
+             <normaloff>:/icons/keyboard_arrow_right_black.svg</normaloff>:/icons/keyboard_arrow_right_black.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButtonRotationYMinus">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>190</y>
+             <width>31</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-bottom-right-radius: 0px;
+border-top-right-radius: 0px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../misc/resource.qrc">
+             <normaloff>:/icons/keyboard_arrow_left_black.svg</normaloff>:/icons/keyboard_arrow_left_black.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButtonRotationYPlus">
+           <property name="geometry">
+            <rect>
+             <x>260</x>
+             <y>190</y>
+             <width>31</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-bottom-left-radius: 0px;
+border-top-left-radius: 0px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../misc/resource.qrc">
+             <normaloff>:/icons/keyboard_arrow_right_black.svg</normaloff>:/icons/keyboard_arrow_right_black.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="labelScale">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>20</y>
+             <width>110</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Scale</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="labelScaleValue">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>16</y>
+             <width>90</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+	background-color: rgb(21, 22, 30);
+	border-top-right-radius: 0px;
+	border-top-left-radius: 0px;
+	border-left: 2px solid;
+	border-right: 2px solid;
+	border-bottom: 2px solid;
+	border-color: rgb(255, 210, 128);
+}</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="labelShiftX">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>70</y>
+             <width>110</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Shift by X</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="labelShiftY">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>100</y>
+             <width>110</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Shift by Y</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="labelRotationX">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>160</y>
+             <width>110</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Rotate by X</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="labelRotationY">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>190</y>
+             <width>110</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Rotate by Y</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="labelRotationZ">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>220</y>
+             <width>110</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Rotate by Z</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButtonRotationZPlus">
+           <property name="geometry">
+            <rect>
+             <x>260</x>
+             <y>220</y>
+             <width>31</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-bottom-left-radius: 0px;
+border-top-left-radius: 0px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../misc/resource.qrc">
+             <normaloff>:/icons/keyboard_arrow_right_black.svg</normaloff>:/icons/keyboard_arrow_right_black.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButtonRotationZMinus">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>220</y>
+             <width>31</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-bottom-right-radius: 0px;
+border-top-right-radius: 0px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../misc/resource.qrc">
+             <normaloff>:/icons/keyboard_arrow_left_black.svg</normaloff>:/icons/keyboard_arrow_left_black.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButtonControlHide">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>300</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>22</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">/*
+QPushButton {
+background: none;
+border: none;
+color: rgb(255, 210, 128);
+font: 14pt &quot;Anta&quot;;
+}
+
+QPushButton:hover {
+color: rgb(232, 249, 253);
+}
+*/
+
+QPushButton {
+border: none;
+border-bottom-right-radius: 0px;
+border-bottom-left-radius: 0px;
+background-color: rgb(255, 210, 128);
+}
+
+QPushButton:hover {
+background-color: rgb(255, 224, 179);
+}
+
+QPushButton:pressed {
+background-color: rgb(255, 153, 0);
+}</string>
+           </property>
+           <property name="text">
+            <string>Control Panel</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../misc/resource.qrc">
+             <normaloff>:/icons/keyboard_double_arrow_up_black.svg</normaloff>:/icons/keyboard_double_arrow_up_black.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+          <zorder>doubleSpinBoxRotationZ</zorder>
+          <zorder>doubleSpinBoxRotationY</zorder>
+          <zorder>doubleSpinBoxRotationX</zorder>
+          <zorder>doubleSpinBoxShiftZ</zorder>
+          <zorder>doubleSpinBoxShiftY</zorder>
+          <zorder>doubleSpinBoxScale</zorder>
+          <zorder>doubleSpinBoxShiftX</zorder>
+          <zorder>pushButtonScaleMinus</zorder>
+          <zorder>pushButtonScalePlus</zorder>
+          <zorder>pushButtonShiftXMinus</zorder>
+          <zorder>pushButtonShiftYMinus</zorder>
+          <zorder>pushButtonShiftYPlus</zorder>
+          <zorder>pushButtonShiftXPlus</zorder>
+          <zorder>pushButtonShiftZMinus</zorder>
+          <zorder>pushButtonShiftZPlus</zorder>
+          <zorder>labelShiftZ</zorder>
+          <zorder>pushButtonRotationXMinus</zorder>
+          <zorder>pushButtonRotationXPlus</zorder>
+          <zorder>pushButtonRotationYMinus</zorder>
+          <zorder>pushButtonRotationYPlus</zorder>
+          <zorder>labelScaleValue</zorder>
+          <zorder>labelShiftX</zorder>
+          <zorder>labelShiftY</zorder>
+          <zorder>labelRotationX</zorder>
+          <zorder>labelRotationY</zorder>
+          <zorder>labelRotationZ</zorder>
+          <zorder>pushButtonRotationZPlus</zorder>
+          <zorder>pushButtonRotationZMinus</zorder>
+          <zorder>pushButtonControlHide</zorder>
+          <zorder>labelScale</zorder>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonSettingsShow">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>22</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: none;</string>
+          </property>
+          <property name="text">
+           <string>Settings</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../misc/resource.qrc">
+            <normaloff>:/icons/keyboard_double_arrow_down_black.svg</normaloff>:/icons/keyboard_double_arrow_down_black.svg</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="widgetSettings" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>280</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QWidget {
+background-color: rgb(58, 8, 120);
+border-radius: 10px;
+}
+
+QSlider::groove:horizontal {
+background-color: rgb(21, 22, 30);
+border: 2px solid;
+border-radius: 7px;
+border-color: rgb(255, 210, 128);
+height: 13px;
+}
+
+QSlider::handle:horizontal {
+background-color: rgb(128, 222, 244);
+background-color: rgb(255, 210, 128);
+border: 1px solid;
+border-radius: 5px;
+border-color: rgb(255, 210, 128);
+border-color: rgb(21, 22, 30);
+width: 20px;
+}
+
+QToolButton {
+border-radius: 6px;
+border-style: solid;
+border-width: 2px;
+border-color: rgb(8, 1, 18);
+}
+
+Line {
+background-color: rgb(255, 210, 128);
+}
+
+QMainWindow {
+background-color: rgb(21, 22, 30);
+}
+
+QLabel {
+background: none;
+color: rgb(255, 210, 128);
+/*font: 14pt &quot;Anta&quot;;*/
+}
+
+QPushButton {
+/*font: 14pt &quot;Anta&quot;;*/
+color: rgb(6, 17, 19);
+border-radius: 6px;
+border-style: solid;
+border-width: 2px;
+border-color: rgb(8, 1, 18);
+background-color: rgb(128, 222, 244);
+}
+
+QPushButton:hover {
+background-color: rgb(208, 243, 251);
+}
+
+QPushButton:pressed {
+background-color: rgb(34, 62, 98);
+}
+
+QComboBox {
+border: 1px solid;
+/*font: 13pt &quot;Anta&quot;;*/
+border-radius: 6px;
+/* padding: 0 5px; */
+color: rgb(11, 1, 24);
+background-color: rgb(255, 210, 128);
+border-color: rgb(8, 1, 18);
+selection-background-color: rgb(255, 249, 229);
+selection-color: black;
+}
+
+QComboBox::drop-down:button {
+color: rgb(255, 210, 128);
+border-top-right-radius: 4px;
+border-bottom-right-radius: 4px;
+border-style: solid;
+border-width: 0px;
+border-left-width: 1px;
+border-color: rgb(8, 1, 18);
+background-color: rgb(128, 222, 244);
+padding: 0px;
+width: 20px;
+}
+
+QComboBox::down-arrow {
+image: url(:/icons/keyboard_arrow_down_black.svg);
+}
+
+QComboBox::drop-down:hover {
+background-color: rgb(208, 243, 251);
+}
+
+QComboBox::drop-down:pressed {
+background-color: rgb(34, 62, 98);
+}
+
+QComboBox QAbstractItemView {
+color: rgb(255, 210, 128);
+border: 0px solid;
+border-radius: 4px;
+border-color: rgba(130, 127, 255, 133);
+background-color: rgb(2, 1, 18);
+}
+
+QComboBox:item {
+color: rgb(255, 210, 128);
+}
+
+QComboBox:item:selected {
+background-color: rgb(12, 117, 141);
+color: rgb(255, 210, 128);
+}
+
+QLineEdit {
+border: 2px solid;
+/*font: 13pt &quot;Anta&quot;;*/
+border-radius: 6px;
+/* padding: 0 8px; */
+selection-background-color: rgb(255, 249, 229);
+selection-color: black;
+color: rgb(11, 1, 24);
+background-color: rgb(255, 210, 128);
+border-color: rgb(8, 1, 18);
+}
+
+QDoubleSpinBox {
+border: 1px solid;
+/*font: 13pt &quot;Anta&quot;;*/
+/* padding: 0 5px; */
+border-radius: 6px;
+selection-background-color: rgb(255, 249, 229);
+selection-color: black;
+color: rgb(11, 1, 24);
+background-color: rgb(255, 210, 128);
+border-color: rgb(8, 1, 18);
+}
+
+QDoubleSpinBox::up-button {
+subcontrol-origin: border;
+subcontrol-position: top right; 
+border-top-right-radius: 3px;
+border-style: solid;
+border-width: 1px;
+border-color: rgb(8, 1, 18);
+background-color: rgb(128, 222, 244);
+image: url(:/icons/add_black.svg);
+padding: 0px;
+margin: 0px;
+width: 16px;
+height: 13px;
+ }
+
+
+QDoubleSpinBox::down-button {
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+border-bottom-right-radius: 3px;
+border-style: solid;
+border-width: 1px;
+border-color: rgb(8, 1, 18);
+background-color: rgb(128, 222, 244);
+image: url(:/icons/remove_black.svg);
+padding: 0px;
+margin: 0px;
+width: 16px;
+height: 13px;
+ }
+
+QDoubleSpinBox::down-button:hover {
+background-color: rgb(208, 243, 251);
+}
+
+QDoubleSpinBox::down-button:pressed {
+background-color: rgb(34, 62, 98);
+}
+
+QDoubleSpinBox::up-button:hover {
+background-color: rgb(208, 243, 251);
+}
+
+QDoubleSpinBox::up-button:pressed {
+background-color: rgb(34, 62, 98);
+}
+
+QRadioButton {
+/*font: 13pt &quot;Anta&quot;;*/
+color: rgb(255, 210, 128);
+}
+
+QRadioButton::indicator {
+width: 10px;
+height: 10px;
+border-radius: 7px;
+}
+
+QRadioButton::indicator:checked {
+background-color:  rgb(243, 89, 97);
+border: 2px solid rgb(255, 210, 128);
+}
+
+QRadioButton::indicator:unchecked {
+background-color: rgb(8, 1, 18);
+border: 2px solid rgb(255, 210, 128);
+}
+
+QCheckBox {
+/*font: 13pt &quot;Anta&quot;;*/
+color: rgb(255, 210, 128);
+spacing: 4px;
+}
+
+QCheckBox::QLabel {
+}
+
+QCheckBox::indicator {
+width: 13px;
+height: 13px;
+border-radius: 3px;
+}
+
+QCheckBox::indicator:checked {
+background-color: rgb(128, 222, 244);
+border: 2px solid rgb(255, 210, 128);
+image: url(:/icons/check_black.svg);
+}
+
+QCheckBox::indicator:unchecked {
+background-color: rgb(8, 1, 18);
+border: 2px solid rgb(255, 210, 128);
+}
+
+QSpinBox {
+border: 1px solid;
+/*font: 13pt &quot;Anta&quot;;*/
+/* padding: 0 5px; */
+border-radius: 6px;
+selection-background-color: rgb(255, 249, 229);
+selection-color: black;
+color: rgb(11, 1, 24);
+background-color: rgb(255, 210, 128);
+border-color: rgb(74, 71, 158);
+}
+
+QSpinBox::up-button {
+subcontrol-origin: border;
+subcontrol-position: top right; 
+border-top-right-radius: 3px;
+border-style: solid;
+border-width: 0px;
+border-color: rgb(74, 71, 158);
+background-color:  rgb(74, 71, 158);
+image: url(:/icons/add_black.svg);
+padding: 0px;
+margin: 0px;
+width: 16px;
+height: 14px;
+}
+
+QSpinBox::down-button {
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+border-bottom-right-radius: 3px;
+border-style: solid;
+border-width: 0px;
+border-color: rgb(74, 71, 158);
+background-color:  rgb(74, 71, 158);
+image: url(:/icons/remove_black.svg);
+padding: 0px;
+margin: 0px;
+width: 16px;
+height: 14px;
+}
+
+QSpinBox::down-button:hover {
+background-color: rgb(169, 167, 215);
+}
+
+QSpinBox::down-button:pressed {
+background-color: rgb(25, 24, 53);
+}
+
+QSpinBox::up-button:hover {
+background-color: rgb(169, 167, 215);
+}
+
+QSpinBox::up-button:pressed {
+background-color: rgb(25, 24, 53);
+}
+</string>
+          </property>
+          <widget class="QComboBox" name="comboBoxProjection">
+           <property name="geometry">
+            <rect>
+             <x>160</x>
+             <y>64</y>
+             <width>131</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="editable">
+            <bool>false</bool>
+           </property>
+           <item>
+            <property name="text">
+             <string>Perspective</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Parallel</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QToolButton" name="toolButtonBackColor">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>30</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../misc/resource.qrc">
+             <normaloff>:/icons/palette_black.svg</normaloff>:/icons/palette_black.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QDoubleSpinBox" name="doubleSpinBoxDotSize">
+           <property name="geometry">
+            <rect>
+             <x>60</x>
+             <y>160</y>
+             <width>62</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <double>1.000000000000000</double>
+           </property>
+          </widget>
+          <widget class="QLabel" name="labelDotSize">
+           <property name="geometry">
+            <rect>
+             <x>60</x>
+             <y>140</y>
+             <width>71</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Size</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="checkBoxMoveCameraZ">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>70</y>
+             <width>121</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="text">
+            <string>Auto adjust Z</string>
+           </property>
+           <property name="tristate">
+            <bool>false</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButtonDefaultSettings">
+           <property name="geometry">
+            <rect>
+             <x>220</x>
+             <y>30</y>
+             <width>71</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Default</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="checkBoxShowAxis">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>90</y>
+             <width>91</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="text">
+            <string>Show axis</string>
+           </property>
+           <property name="tristate">
+            <bool>false</bool>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="comboBoxDotType">
+           <property name="geometry">
+            <rect>
+             <x>130</x>
+             <y>160</y>
+             <width>161</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <item>
+            <property name="text">
+             <string>None</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Circle</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Square</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QToolButton" name="toolButtonDotColor">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>150</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../misc/resource.qrc">
+             <normaloff>:/icons/palette_black.svg</normaloff>:/icons/palette_black.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QLabel" name="labelDotType">
+           <property name="geometry">
+            <rect>
+             <x>130</x>
+             <y>140</y>
+             <width>81</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Type</string>
+           </property>
+          </widget>
+          <widget class="Line" name="lineDot1">
+           <property name="windowModality">
+            <enum>Qt::NonModal</enum>
+           </property>
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>130</y>
+             <width>120</width>
+             <height>2</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 210, 128);</string>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Sunken</enum>
+           </property>
+           <property name="lineWidth">
+            <number>1</number>
+           </property>
+           <property name="midLineWidth">
+            <number>0</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="labelDot">
+           <property name="geometry">
+            <rect>
+             <x>110</x>
+             <y>120</y>
+             <width>81</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Dots</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="Line" name="lineDot2">
+           <property name="geometry">
+            <rect>
+             <x>170</x>
+             <y>130</y>
+             <width>120</width>
+             <height>2</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>120</width>
+             <height>2</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 210, 128);</string>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="labelLine">
+           <property name="geometry">
+            <rect>
+             <x>110</x>
+             <y>200</y>
+             <width>81</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Line</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="Line" name="lineLine1">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>210</y>
+             <width>120</width>
+             <height>2</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>2</height>
+            </size>
+           </property>
+           <property name="baseSize">
+            <size>
+             <width>1</width>
+             <height>1</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 210, 128);</string>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Sunken</enum>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+          <widget class="Line" name="lineLine2">
+           <property name="geometry">
+            <rect>
+             <x>170</x>
+             <y>210</y>
+             <width>120</width>
+             <height>2</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>120</width>
+             <height>2</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 210, 128);</string>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+          <widget class="QToolButton" name="toolButtonLineColor">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>230</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../misc/resource.qrc">
+             <normaloff>:/icons/palette_black.svg</normaloff>:/icons/palette_black.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="shortcut">
+            <string/>
+           </property>
+           <property name="arrowType">
+            <enum>Qt::NoArrow</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="labelLineType">
+           <property name="geometry">
+            <rect>
+             <x>130</x>
+             <y>220</y>
+             <width>81</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Type</string>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="comboBoxLineType">
+           <property name="geometry">
+            <rect>
+             <x>130</x>
+             <y>240</y>
+             <width>91</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <item>
+            <property name="text">
+             <string>Solid</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Dotted</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QLabel" name="labelLineStipple">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>220</y>
+             <width>51</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Stipple</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="labelLineWidth">
+           <property name="geometry">
+            <rect>
+             <x>60</x>
+             <y>220</y>
+             <width>71</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="lineWidth">
+            <number>1</number>
+           </property>
+           <property name="text">
+            <string>Width</string>
+           </property>
+          </widget>
+          <widget class="QDoubleSpinBox" name="doubleSpinBoxLineWidth">
+           <property name="geometry">
+            <rect>
+             <x>60</x>
+             <y>240</y>
+             <width>62</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <double>0.500000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.500000000000000</double>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="comboBoxLineStipple">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>240</y>
+             <width>61</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <item>
+            <property name="text">
+             <string>1</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>2</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>3</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>4</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>5</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>6</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>7</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>8</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QPushButton" name="pushButtonSaveSettings">
+           <property name="geometry">
+            <rect>
+             <x>80</x>
+             <y>30</y>
+             <width>61</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Save</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButtonSettingsHide">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>300</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+border: none;
+border-bottom-right-radius: 0px;
+border-bottom-left-radius: 0px;
+background-color: rgb(255, 210, 128);
+}
+
+QPushButton:hover {
+background-color: rgb(255, 224, 179);
+}
+
+QPushButton:pressed {
+background-color: rgb(255, 153, 0);
+}</string>
+           </property>
+           <property name="text">
+            <string>Settings</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../misc/resource.qrc">
+             <normaloff>:/icons/keyboard_double_arrow_up_black.svg</normaloff>:/icons/keyboard_double_arrow_up_black.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButtonLoadSettings">
+           <property name="geometry">
+            <rect>
+             <x>150</x>
+             <y>30</y>
+             <width>61</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Load</string>
+           </property>
+          </widget>
+          <widget class="QSlider" name="horizontalSliderCameraZ">
+           <property name="geometry">
+            <rect>
+             <x>160</x>
+             <y>97</y>
+             <width>131</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>2</number>
+           </property>
+           <property name="maximum">
+            <number>6</number>
+           </property>
+           <property name="singleStep">
+            <number>1</number>
+           </property>
+           <property name="value">
+            <number>4</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::NoTicks</enum>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonExportShow">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>22</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: none;</string>
+          </property>
+          <property name="text">
+           <string>Export</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../misc/resource.qrc">
+            <normaloff>:/icons/keyboard_double_arrow_down_black.svg</normaloff>:/icons/keyboard_double_arrow_down_black.svg</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="widgetExport" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QWidget {
+background-color: rgb(58, 8, 120);
+border-radius: 10px;
+}
+
+QProgressBar {
+color: rgb(128, 222, 244);
+border-radius: 7px;
+border-style: solid;
+border-width: 2px;
+border-color: rgb(8, 1, 18);
+background-color: rgb(8, 1, 18);
+text-align: center;
+}
+
+QProgressBar::chunk:horizontal {
+background-color: rgb(255, 210, 128);
+border-radius: 6px;
+}
+
+QToolButton {
+border-radius: 6px;
+border-style: solid;
+border-width: 2px;
+border-color: rgb(8, 1, 18);
+}
+
+QMainWindow {
+background-color: rgb(21, 22, 30);
+}
+
+QLabel {
+background: none;
+color: rgb(255, 210, 128);
+/*font: 14pt &quot;Anta&quot;;*/
+}
+
+QPushButton {
+/*font: 14pt &quot;Anta&quot;;*/
+color: rgb(6, 17, 19);
+border-radius: 6px;
+border-style: solid;
+border-width: 2px;
+border-color: rgb(8, 1, 18);
+background-color: rgb(128, 222, 244);
+}
+
+QPushButton:hover {
+background-color: rgb(208, 243, 251);
+}
+
+QPushButton:pressed {
+background-color: rgb(34, 62, 98);
+}
+
+QComboBox {
+border: 1px solid;
+/*font: 13pt &quot;Anta&quot;;*/
+border-radius: 6px;
+/* padding: 0 5px; */
+color: rgb(11, 1, 24);
+background-color: rgb(255, 210, 128);
+border-color: rgb(8, 1, 18);
+selection-background-color: rgb(255, 249, 229);
+selection-color: black;
+}
+
+QComboBox::drop-down:button {
+color: rgb(255, 210, 128);
+border-top-right-radius: 4px;
+border-bottom-right-radius: 4px;
+border-style: solid;
+border-width: 0px;
+border-left-width: 1px;
+border-color: rgb(8, 1, 18);
+background-color: rgb(128, 222, 244);
+padding: 0px;
+width: 20px;
+}
+
+QComboBox::down-arrow {
+image: url(:/icons/keyboard_arrow_down_black.svg);
+}
+
+QComboBox::drop-down:hover {
+background-color: rgb(208, 243, 251);
+}
+
+QComboBox::drop-down:pressed {
+background-color: rgb(34, 62, 98);
+}
+
+QComboBox QAbstractItemView {
+color: rgb(255, 210, 128);
+border: 0px solid;
+border-radius: 4px;
+border-color: rgba(130, 127, 255, 133);
+background-color: rgb(2, 1, 18);
+}
+
+QComboBox:item {
+color: rgb(255, 210, 128);
+}
+
+QComboBox:item:selected {
+background-color: rgb(12, 117, 141);
+color: rgb(255, 210, 128);
+}
+
+QLineEdit {
+border: 2px solid;
+/*font: 13pt &quot;Anta&quot;;*/
+border-radius: 6px;
+/* padding: 0 8px; */
+selection-background-color: rgb(255, 249, 229);
+selection-color: black;
+color: rgb(11, 1, 24);
+background-color: rgb(255, 210, 128);
+border-color: rgb(8, 1, 18);
+}
+
+QDoubleSpinBox {
+border: 1px solid;
+/*font: 13pt &quot;Anta&quot;;*/
+/* padding: 0 5px; */
+border-radius: 6px;
+selection-background-color: rgb(255, 249, 229);
+selection-color: black;
+color: rgb(11, 1, 24);
+background-color: rgb(255, 210, 128);
+border-color: rgb(8, 1, 18);
+}
+
+QDoubleSpinBox::up-button {
+subcontrol-origin: border;
+subcontrol-position: top right; 
+border-top-right-radius: 3px;
+border-style: solid;
+border-width: 1px;
+border-color: rgb(8, 1, 18);
+background-color: rgb(128, 222, 244);
+image: url(:/icons/add_black.svg);
+padding: 0px;
+margin: 0px;
+width: 16px;
+height: 13px;
+ }
+
+
+QDoubleSpinBox::down-button {
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+border-bottom-right-radius: 3px;
+border-style: solid;
+border-width: 1px;
+border-color: rgb(8, 1, 18);
+background-color: rgb(128, 222, 244);
+image: url(:/icons/remove_black.svg);
+padding: 0px;
+margin: 0px;
+width: 16px;
+height: 13px;
+ }
+
+QDoubleSpinBox::down-button:hover {
+background-color: rgb(208, 243, 251);
+}
+
+QDoubleSpinBox::down-button:pressed {
+background-color: rgb(34, 62, 98);
+}
+
+QDoubleSpinBox::up-button:hover {
+background-color: rgb(208, 243, 251);
+}
+
+QDoubleSpinBox::up-button:pressed {
+background-color: rgb(34, 62, 98);
+}
+
+QRadioButton {
+/*font: 13pt &quot;Anta&quot;;*/
+color: rgb(255, 210, 128);
+}
+
+QRadioButton::indicator {
+width: 10px;
+height: 10px;
+border-radius: 7px;
+}
+
+QRadioButton::indicator:checked {
+background-color:  rgb(243, 89, 97);
+border: 2px solid rgb(255, 210, 128);
+}
+
+QRadioButton::indicator:unchecked {
+background-color: rgb(8, 1, 18);
+border: 2px solid rgb(255, 210, 128);
+}
+
+QCheckBox {
+/*font: 13pt &quot;Anta&quot;;*/
+color: rgb(255, 210, 128);
+spacing: 4px;
+}
+
+QCheckBox::QLabel {
+}
+
+QCheckBox::indicator {
+width: 13px;
+height: 13px;
+border-radius: 3px;
+}
+
+QCheckBox::indicator:checked {
+background-color: rgb(128, 222, 244);
+border: 2px solid rgb(255, 210, 128);
+image: url(:/icons/check_black.svg);
+}
+
+QCheckBox::indicator:unchecked {
+background-color: rgb(8, 1, 18);
+border: 2px solid rgb(255, 210, 128);
+}
+
+QSpinBox {
+border: 1px solid;
+/*font: 13pt &quot;Anta&quot;;*/
+/* padding: 0 5px; */
+border-radius: 6px;
+selection-background-color: rgb(255, 249, 229);
+selection-color: black;
+color: rgb(11, 1, 24);
+background-color: rgb(255, 210, 128);
+border-color: rgb(74, 71, 158);
+}
+
+QSpinBox::up-button {
+subcontrol-origin: border;
+subcontrol-position: top right; 
+border-top-right-radius: 3px;
+border-style: solid;
+border-width: 0px;
+border-color: rgb(74, 71, 158);
+background-color:  rgb(74, 71, 158);
+image: url(:/icons/add_black.svg);
+padding: 0px;
+margin: 0px;
+width: 16px;
+height: 14px;
+}
+
+QSpinBox::down-button {
+subcontrol-origin: border;
+subcontrol-position: bottom right;
+border-bottom-right-radius: 3px;
+border-style: solid;
+border-width: 0px;
+border-color: rgb(74, 71, 158);
+background-color:  rgb(74, 71, 158);
+image: url(:/icons/remove_black.svg);
+padding: 0px;
+margin: 0px;
+width: 16px;
+height: 14px;
+}
+
+QSpinBox::down-button:hover {
+background-color: rgb(169, 167, 215);
+}
+
+QSpinBox::down-button:pressed {
+background-color: rgb(25, 24, 53);
+}
+
+QSpinBox::up-button:hover {
+background-color: rgb(169, 167, 215);
+}
+
+QSpinBox::up-button:pressed {
+background-color: rgb(25, 24, 53);
+}
+</string>
+          </property>
+          <widget class="QPushButton" name="pushButtonBmp">
+           <property name="geometry">
+            <rect>
+             <x>80</x>
+             <y>30</y>
+             <width>71</width>
+             <height>32</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-bottom-left-radius: 0px;
+border-top-left-radius: 0px;</string>
+           </property>
+           <property name="text">
+            <string>BMP</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../misc/resource.qrc">
+             <normaloff>:/icons/image_black.svg</normaloff>:/icons/image_black.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButtonJpeg">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>30</y>
+             <width>71</width>
+             <height>32</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-bottom-right-radius: 0px;
+border-top-right-radius: 0px;</string>
+           </property>
+           <property name="text">
+            <string>JPEG</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../misc/resource.qrc">
+             <normaloff>:/icons/image_black.svg</normaloff>:/icons/image_black.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButtonGif">
+           <property name="geometry">
+            <rect>
+             <x>170</x>
+             <y>30</y>
+             <width>71</width>
+             <height>32</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-bottom-right-radius: 0px;
+border-top-right-radius: 0px;</string>
+           </property>
+           <property name="text">
+            <string> GIF</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../misc/resource.qrc">
+             <normaloff>:/icons/videocam_black.svg</normaloff>:/icons/videocam_black.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QProgressBar" name="progressBarGif">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>70</y>
+             <width>281</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="maximum">
+            <number>5000</number>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="textVisible">
+            <bool>false</bool>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="invertedAppearance">
+            <bool>false</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButtonExportHide">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>300</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+border: none;
+border-bottom-right-radius: 0px;
+border-bottom-left-radius: 0px;
+background-color: rgb(255, 210, 128);
+}
+
+QPushButton:hover {
+background-color: rgb(255, 224, 179);
+}
+
+QPushButton:pressed {
+background-color: rgb(255, 153, 0);
+}</string>
+           </property>
+           <property name="text">
+            <string>Export</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../misc/resource.qrc">
+             <normaloff>:/icons/keyboard_double_arrow_up_black.svg</normaloff>:/icons/keyboard_double_arrow_up_black.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButtonGifHD">
+           <property name="geometry">
+            <rect>
+             <x>240</x>
+             <y>30</y>
+             <width>51</width>
+             <height>32</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+border-bottom-left-radius: 0px;
+border-top-left-radius: 0px;
+background-color: rgb(246, 162, 163);
+}
+
+QPushButton:hover {
+/*
+background-color: rgb(207, 252, 218); */
+}
+
+QPushButton:pressed {
+/*
+background-color: rgb(111, 246, 143); */
+
+}
+
+QPushButton:checked {
+background-color: rgb(111, 246, 143);
+}
+
+
+</string>
+           </property>
+           <property name="text">
+            <string>HD</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QPushButton" name="pushButtonShowAll">
+       <property name="geometry">
+        <rect>
+         <x>1</x>
+         <y>10</y>
+         <width>22</width>
+         <height>138</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+/*font: 14pt &quot;Anta&quot;;*/
+color: rgb(6, 17, 19);
+border: 0px transparent;
+border-radius: 10px;
+border-top-left-radius: 0px;
+border-bottom-left-radius: 0px;
+background-color: rgb(255, 210, 128);
+}
+
+QPushButton:hover {
+background-color: rgb(255, 224, 179);
+}
+
+QPushButton:pressed {
+background-color: rgb(255, 153, 0);
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="../misc/resource.qrc">
+         <normaloff>:/icons/keyboard_arrow_right_black.svg</normaloff>:/icons/keyboard_arrow_right_black.svg</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>25</width>
+         <height>25</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="MessageWidget" name="widgetMessage" native="true">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>330</x>
+         <y>10</y>
+         <width>100</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>OpenGLWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">openglwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MessageWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">messagewidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../misc/resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
